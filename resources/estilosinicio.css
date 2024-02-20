@@ -1,0 +1,109 @@
+/* Whastapp container Style  */
+.container-wsp {
+    background-color: rgb(10, 146, 17);
+    border: 2px solid rgb(255, 255, 255);
+    position: fixed;
+    z-index: 999;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    transition: ease 0.3s;
+    animation: ificto 1.2s infinite;
+}
+
+/* Whastapp container Style when you pass the mouse over the icon  */
+.container-wsp:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+/* Whastapp container Style size */
+.button {
+    width: 70px;
+    transition: ease 1s;
+}
+
+@keyframes ificto {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.85);
+    }
+
+    100% {
+        box-shadow: 0 0 0 5px rgba(0, 0, 0, 0);
+    }
+}
+
+/* All Fonts  Style  */
+
+.navbar-brand {
+    font-family: Impact;
+    font-size: 250%;
+}
+
+.nav-link {
+    font-family: fontSave1;
+}
+
+@font-face {
+    font-family: fontSave1;
+    src: url(resources/fonts/ArchitectsDaughter-Regular.ttf);
+}
+
+
+
+
+
+/* Whastapp container Style when you pass the mouse over the icon  */
+.card-img-top:hover {
+    transform: scale(0.9);
+    transition: 1.0s;
+    opacity: 0;
+}
+
+
+
+/*hover images in churros page*/
+
+.container-churri1 {
+    animation: ificto 1.2s;
+    background-image: url(resources/images/churros3.jpg);
+    background-size: cover;
+
+}
+
+.container-churri2 {
+    animation: ificto 1.2s;
+    background-image: url(resources/images/churoos4.jpg);
+    background-size: cover;
+}
+
+.container-churri3 {
+    animation: ificto 1.2s;
+    background-image: url(resources/images/churros2.png);
+    background-size: contain;
+}
+
+/* sticky a second navbar to a relative position */
+
+.container-navbar {
+    top: 86px;
+    position: sticky;
+    z-index: 999;
+    padding: 0px;
+
+}
+
+
+
+.container-imagesCarousel {
+    border-radius: 50%;
+    display: block;
+}
+
+.containerCarrito {
+    right: 30px;
+    width: 40px;
+    position: fixed;
+    top: 20px;
+}
