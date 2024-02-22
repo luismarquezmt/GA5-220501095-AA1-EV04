@@ -34,6 +34,13 @@
     }
 }
 
+/* Whastapp container Style when you pass the mouse over the icon  */
+.card-img-top:hover {
+    transform: scale(0.9);
+    transition: 1.0s;
+    opacity: 0;
+}
+
 /* All Fonts  Style  */
 
 .navbar-brand {
@@ -54,12 +61,7 @@
 
 
 
-/* Whastapp container Style when you pass the mouse over the icon  */
-.card-img-top:hover {
-    transform: scale(0.9);
-    transition: 1.0s;
-    opacity: 0;
-}
+
 
 
 
