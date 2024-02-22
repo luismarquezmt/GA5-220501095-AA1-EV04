@@ -42,21 +42,20 @@
 }
 
 /* All Fonts  Style  */
-
 .navbar-brand {
-    font-family: Impact;
-    font-size: 250%;
+    font-family: fontSave1;
+    font-size: 100%;
 }
 
 .nav-link {
     font-family: fontSave1;
+    font-size: 150%;
 }
 
 @font-face {
     font-family: fontSave1;
-    src: url(resources/fonts/ArchitectsDaughter-Regular.ttf);
+    src: url(fonts/PlaypenSans-VariableFont_wght.ttf);
 }
-
 
 
 

@@ -44,11 +44,80 @@
                 </li>
             </ul>
         </div>
+
+        <div class="dropdown">
+            <button class="btn btn-success dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                Menu
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./Inicio.html">Home</a></li>
+                <li><a class="dropdown-item" href="./productos0.1.html">Productos</a></li>
+                <li><a class="dropdown-item" href="acceso0.2.html">Login</a></li>
+            </ul>
+        </div>
+
+
+        <!--offcanvaslink -->
+        <img class="containerCarrito" id="carrito" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight" src="public/carrito100x100.png" height="40px"></a>
+
     </nav>
+
+
 
     <div id="spanoso"></div>
 
-  
+    <!--offcanvas Right-->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasRightLabel">Carrito de Compras</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body pl-0">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-auto">Producto</div>
+                    <div class="col-auto ">Precio</div>
+                    <div class="col-auto">Cantidad</div>
+                </div>
+                <div class="row">
+                    <br>
+                </div>
+            </div>
+            <div class="container">
+                <div class="shopping-car-items shoppingCarItemsContainer">
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <p>Total $ </p>
+                    </div>
+                    <div class="col">
+                        <p type="number" id="shopping-car-total">0</p>
+                    </div>
+                </div>
+            </div>
+            <a class="row" href="shoppingcart0.3.html" id="comprar-span">
+                
+            </a>
+
+        </div>
+
+
+        <div class="container-wsp">
+
+
+            <a href="https://wa.me/573002732017?text=Deseo%20una%20Planta%20lok" target="_blank">
+                <img class="button" src="./public/wsp100x100.png" alt="">
+            </a>
+        </div>
+    </div>
+
+
+
+
+
+
     <!--Whastapp container -->
     <div class="container-wsp">
 
@@ -57,10 +126,36 @@
         </a>
     </div>
 
-
-
 </body>
 
+
+<!--Footer container -->
+<div class="container-fluid text-center py-2" style="background-color: rgb(143, 196, 73);">
+    <div class="row">
+        <div class="col">
+            <br>
+            <img src="./public/terramaz-01.png" width="120" height="120" alt="">
+        </div>
+        <div class="col-5" style="font-family: fontSave1; color: aliceblue; font-size:  150%;">
+            ¡SÍGUENOS EN NUESTRAS REDES SOCIALES! <br>
+            <a href="https://www.facebook.com/terrariosterraria" target="_blank">
+                <img src="./public/Face100x100.png" width="60" height="60" alt="">
+            </a>
+
+            <a href="https://www.instagram.com/terrariosterraria/" target="_blank">
+                <img src="./public/insta100x100.png" width="60" height="60" alt="">
+            </a>
+        </div>
+        <div class="col" style="font-family: fontSave1; color: aliceblue;">
+            <br>
+            <br>
+            ¿Tenés una consulta? <br>
+            <img src="./public/movil100x100.png" width="50" height="50" alt="">
+            3002732017
+
+        </div>
+    </div>
+</div>
 <script src="resources/productos.js"></script>
 
 </html>

@@ -1,40 +1,119 @@
 let total = []
+const shoppingCarItemsContainer = document.querySelector(".shoppingCarItemsContainer")
+let shoppingCartTotal = document.getElementById("shopping-car-total")
+let boton = document.getElementById("comprar-span")
+let totali = 0
+let guardados = []
+
 
 class Producto {
-    constructor(nombre, descripcion, precio, href, alt) {
-        this.nombre = nombre
-        this.descripcion = descripcion
-        this.precio = precio
-        this.href = href
-        this.alt = alt
-    }
+  constructor(id, nombre, descripcion, precio, href, alt) {
+    this.id = id
+    this.nombre = nombre
+    this.descripcion = descripcion
+    this.precio = precio
+    this.href = href
+    this.alt = alt
+  }
 
 }
 
-const Producto1 = new Producto("papa", "papa123", 123, "./public/product1.png", "producto1")
-const Producto2 = new Producto("papa", "papa123", 123, "./public/product2.png", "producto2")
-const Producto3 = new Producto("papa", "papa123", 123, "./public/product3.png", "producto2")
-const Producto4 = new Producto("papa", "papa123", 123, "./public/product4.png", "producto2")
-const Producto5 = new Producto("papa", "papa123", 123, "./public/product5.png", "producto2")
-console.log(Producto1);
-console.log(Producto2);
+const Producto1 = new Producto(1, "Terrario Cubico", "3 suculentas / cactus , Alto: 15CM Diametro: 15CM", 69000, "public/product1.png", "producto1")
+const Producto2 = new Producto(2, "Dodecaedro Estrella", "3 suculentas / cactus , Alto: 16CM Diametro: 19CM", 85000, "./public/product2.png", "producto2")
+const Producto3 = new Producto(3, "Dodecaedro Piramidal", "5 suculentas / cactus , Alto: 30CM Diametro: 26CM", 124000, "./public/product3.png", "producto2")
+const Producto4 = new Producto(4, "Mesa Hexagonal", "3 suculentas / cactus , Alto: 7CM Diametro: 16CM", 75000, "./public/product4.png", "producto2")
+const Producto5 = new Producto(5, "Cubico 3D", "7/8 suculentas / cactus , Alto: 18CM Diametro: 18CM", 150000, "./public/product5.png", "producto2")
 
 total.push(Producto1, Producto2, Producto3, Producto4, Producto5)
 
-console.log(total);
+//funcion principal cuando se le da al botoon de carrito
+function sum(number) {
+  let name = document.getElementsByClassName("btn btn-primary")[number - 1].offsetParent.children[1].children[0].innerText;
+  let priceValue = document.getElementsByClassName("btn btn-primary")[number - 1].offsetParent.children[1].children[2].innerText;
+  let imageSrc = document.getElementsByClassName("btn btn-primary")[number - 1].offsetParent.children[0].currentSrc;
+  let priceNum = priceValue.replace("COP", "")
+  let priceNuma = priceNum.replace(",00", "")
+  let price = Number(priceNuma.replace(".", ""))
+  addToShoppingCart(name, imageSrc, priceValue)
+  addToTotal(price)
+  carritoCambioimg()
+  addButtonToBuy()
+
+}
+
+function addToTotal(value) {
+  totali = totali + value
+  let numberOtro = new Intl.NumberFormat('co-CP', { style: 'currency', currency: 'COP' }).format(
+    totali)
+  shoppingCartTotal.innerHTML = numberOtro
+
+}
+
+
+
+function addToShoppingCart(name, image, price) {
+  const shoppingCarRow = document.createElement('div');
+  const shoppingCarContent = `  <div class="container">
+    <div class="shopping-car-items shoppingCarItemContainer">
+      <div class="row shoppingCarItem">
+
+        <div class="col-4" class="shopping-car-item d-flex align-items-center h-100 order-bottom pb-2 pt-3 -pl-2">
+          <img src=${image} class="shopping-car-image" style="width: 50px; height: 50px;">
+          <h6 class="shopping-car-item-title shoppingItemCarItemTitle ">${name}</h6>
+        </div>
+
+        <div class="col-5" class="shopping-car-price d-flex align-items-center h-100 border-bottom pb-2 pt-3">
+          <p class="item-price mb-0 shoppingCarItemPrice">${price}</p>
+        </div>
+         
+        <div class="col-1">
+          <p class="shoppingCarItemQuantity">0</p>
+        </div>
+
+        <div class="col-1">
+          <button type="button" 
+                  class="btn btn-danger deleteButton ">X
+          </button>  
+        </div>
+        
+      </div>
+
+    </div>
+  </div>
+  </div>`
+  shoppingCarRow.innerHTML = shoppingCarContent
+  shoppingCarItemsContainer.append(shoppingCarRow)
+  guardados.push(shoppingCarContent);
+  console.log(guardados);
+}
+
+
+
+function addButtonToBuy() {
+  let comprar = `<button class="btn btn-success" onclick=>Comprar</button>`
+  boton.innerHTML = comprar
+}
+
+
 total.forEach(producto => {
-    document.getElementById("spanoso").innerHTML += `<div class="card" style="width: 18rem;">
+  //convertir number a cop para mostrar en card
+  let numberOtro = new Intl.NumberFormat('co-CP', { style: 'currency', currency: 'COP' }).format(
+    producto.precio)
+  document.getElementById("spanoso").innerHTML += `<div class="card" style="width: 18rem;">
 <img src="${producto.href}" class="card-img-top" alt="${producto.alt}">
 <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-        content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">${producto.nombre}</h5>
+    <p class="card-text">${producto.descripcion}</p>
+    <p class="card-text">${numberOtro}</p>
+    <a href="#" class="btn btn-primary" onclick=sum(${producto.id}) >Adicionar a carrito</a>
+
 </div>
 </div>`
 
+
 });
 
-
-
+function carritoCambioimg() {
+  document.getElementById("carrito").src = "public/carritolleno100x100.png"
+}
 

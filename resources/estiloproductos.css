@@ -1,3 +1,21 @@
+.navbar-brand {
+    font-family: fontSave1;
+    font-size: 100%;
+}
+
+.nav-link {
+    font-family: fontSave1;
+    font-size: 150%;
+}
+
+@font-face {
+    font-family: fontSave1;
+    src: url(fonts/PlaypenSans-VariableFont_wght.ttf);
+}
+
+
+
+
 /* Whastapp container Style  */
 .container-wsp {
     background-color: rgb(10, 146, 17);
@@ -42,7 +60,7 @@
 }
 
 
-.navbar-collapse{
+.navbar-collapse {
     display: flex;
     flex-direction: row-reverse;
 }
@@ -73,7 +91,7 @@
 @media (min-width: 800px) and (max-width: 1299px) {
     #spanoso {
         display: grid;
-        grid-template-columns: 30% 30% 30% ;
+        grid-template-columns: 30% 30% 30%;
     }
 }
 
@@ -81,7 +99,20 @@
 @media (min-width: 450px) and (max-width: 799px) {
     #spanoso {
         display: grid;
-        grid-template-columns: 50% 50% ;
+        grid-template-columns: 50% 50%;
         overflow: hidden;
     }
+}
+
+.shopping-car-item-title {
+    word-break: break-all;
+}
+
+.item-price {
+    word-break: break-all;
+}
+
+#carrito:hover {
+    scale: 1.75;
+
 }
