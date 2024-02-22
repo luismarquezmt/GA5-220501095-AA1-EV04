@@ -1,0 +1,115 @@
+.col {
+    height: 150px;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ontainer-xxl {
+    background-color: rgb(143, 196, 73);
+    margin: 0%;
+    padding: 15%;
+    justify-items: center;
+    align-items: center;
+    width: 400px;
+    height: 950px;
+    display: flex;
+}
+
+@media (min-width: 300px) and (max-width: 799px) {
+    .ontainer-xxl {
+        background-color: rgb(179, 216, 132);
+        margin: 0%;
+        padding: 2%;
+        justify-items: flex-start;
+        align-items: flex-start;
+        width: 500px;
+        height: 900px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+
+#imageLogin {
+    width: 450px;
+    height: 450px;
+    justify-items: center;
+
+}
+
+@media (min-width: 300px) and (max-width: 799px) {
+    #imageLogin {
+        width: 250px;
+        height: 250px;
+        justify-items: flex-start;
+        margin-left: 25%;
+
+    }
+}
+
+.main {
+    display: flex;
+}
+
+.form {
+    padding: 2%;
+    border: 3px solid black;
+    display: flex;
+    height: 350px;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 65%;
+    top: 30%;
+    border-radius: 6%;
+}
+
+@media (min-width: 300px) and (max-width: 799px) {
+    .form {
+        padding: 2%;
+        border: 3px solid black;
+        display: flex;
+        height: 450px;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        left: 15%;
+        top: 35%;
+        border-radius: 6%;
+    }
+}
+
+
+
+
+.imagenes {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: absolute;
+    left: 69%;
+    top: 70%;
+
+}
+
+.imge {
+    width: 75px;
+    height: 75px;
+    padding: 3%;
+    margin-left: 10%;
+}
+
+@media (min-width: 300px) and (max-width: 799px) {
+    .imagenes {
+
+        left: 19%;
+        top: 75%;
+    }
+}
+
+
+/* 
+@media (min-width: 400px) and (max-width: 799px){ */
