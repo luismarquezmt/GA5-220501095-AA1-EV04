@@ -81,7 +81,7 @@
 
 
 @media (min-width: 1300px) and (max-width: 2500px) {
-    #spanoso {
+    #spanCardsProducts {
         display: grid;
         grid-template-columns: 20% 20% 20% 20%;
     }
@@ -89,7 +89,7 @@
 
 
 @media (min-width: 800px) and (max-width: 1299px) {
-    #spanoso {
+    #spanCardsProducts {
         display: grid;
         grid-template-columns: 30% 30% 30%;
     }
@@ -97,7 +97,7 @@
 
 
 @media (min-width: 450px) and (max-width: 799px) {
-    #spanoso {
+    #spanCardsProducts {
         display: grid;
         grid-template-columns: 50% 50%;
         overflow: hidden;
@@ -115,4 +115,9 @@
 #carrito:hover {
     scale: 1.75;
 
+}
+
+.shoppingRows{
+    border: 8px solid black;
+    margin-bottom: 10px;
 }

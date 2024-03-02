@@ -25,14 +25,14 @@
 <body>
     <!--navigation bar-->
     <nav class="navbar navbar-expand-lg px-3 sticky-top" style="background-color:rgb(143, 196, 73) ;">
-        <a class="navbar-brand" style="color: rgb(255, 255, 255); font-size: 200%;" href="Inicio.html">
+        <a class="navbar-brand" style="color: rgb(255, 255, 255); font-size: 200%;" href="productos0.1.html">
             <img src="./public/terramaz-01.png" width="60" height="60" alt=""> Terrarios Terraria
         </a>
 
-        <form class="d-flex" role="search">
+        <div class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+        </div>
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -41,6 +41,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="./productos0.1.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="acceso0.2.html">Login</a>
                 </li>
             </ul>
         </div>
@@ -66,7 +69,7 @@
 
 
 
-    <div id="spanoso"></div>
+    <div id="spanCardsProducts"></div>
 
     <!--offcanvas Right-->
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
@@ -97,9 +100,9 @@
                     </div>
                 </div>
             </div>
-            <a class="row" href="shoppingcart0.3.html" id="comprar-span">
-                
-            </a>
+            <div class="row" id="comprar-span">
+
+            </div>
 
         </div>
 
@@ -127,6 +130,11 @@
     </div>
 
 </body>
+
+<div id="CartShoppingSpace">
+
+</div>
+
 
 
 <!--Footer container -->
@@ -156,6 +164,8 @@
         </div>
     </div>
 </div>
+
 <script src="resources/productos.js"></script>
+
 
 </html>
